@@ -54,6 +54,7 @@ export function registerPage(ctx){
 
         await register(username,email,password,gender);
 
+        ctx.updateUserNav();
         ctx.page.redirect('/memes');
 
 
