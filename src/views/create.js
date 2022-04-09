@@ -29,11 +29,11 @@ export function createPage(ctx){
     
             const formData = new FormData(event.target);
     
-            const title = formData.get('title');
-            const description = formData.get('description');
-            const ImageUrl = formData.get('ImageUrl');
+            const title = formData.get('title').trim();
+            const description = formData.get('description').trim();
+            const ImageUrl = formData.get('imageUrl').trim();
 
-            if (title == '' || description == '' || imageUrl == '' ) {
+            if (title == '' || description == '' || ImageUrl == '' ) {
             
                 return alert('All fields are required');
             }
